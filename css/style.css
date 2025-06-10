@@ -1,0 +1,262 @@
+/* Paleta de colores */
+:root {
+  --cafe-oscuro: #3e2f23;
+  --cafe-medio: #5D4037;
+  --cafe-claro: #8D6E63;
+  --beige: #D7CCC8;
+  --beige-claro: #EFEBE9;
+  --verde-cafe: #4E342E;
+  --dorado: #BCAAA4;
+}
+
+/* Estilos generales */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--beige-claro);
+  color: var(--cafe-oscuro);
+  line-height: 1.6;
+}
+
+/* Barra de navegación */
+.navbar {
+  background-color: var(--cafe-oscuro) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(rgba(62, 39, 35, 0.7), rgba(62, 39, 35, 0.7)), url('../img/tierra.jpg') no-repeat center center;
+  background-size: cover;
+  margin-top: 12vh;
+  height: 90vh;
+  min-height: 600px;
+  position: relative;
+}
+
+.hero-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to bottom, transparent, var(--beige-claro));
+}
+
+.hero-content {
+  background-color: rgba(239, 235, 233, 0.85);
+  padding: 3rem;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--beige);
+}
+
+/* Tarjetas de inversión */
+
+.card {
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background-color: white;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--beige);
+}
+
+.card-header {
+  background-color: var(--cafe-medio);
+  color: white;
+  font-family: 'Playfair Display', serif;
+  padding: 1.5rem;
+  border-bottom: 3px solid var(--dorado);
+  
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Botones */
+.btn-cafe {
+  background-color: var(--cafe-medio);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.btn-cafe:hover {
+  background-color: var(--cafe-oscuro);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.btn-outline-cafe {
+  border: 2px solid var(--cafe-medio);
+  color: var(--cafe-medio);
+  background-color: transparent;
+}
+
+.btn-outline-cafe:hover {
+  background-color: var(--cafe-medio);
+  color: white;
+}
+
+/* Secciones */
+.section-title {
+  font-family: 'Playfair Display', serif;
+  color: var(--cafe-oscuro);
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 50%;
+  height: 3px;
+  background-color: var(--dorado);
+}
+
+/* Testimonios */
+.testimonial-card {
+  background-color: white;
+  border-radius: 8px;
+  border-left: 5px solid var(--cafe-claro);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.testimonial-card .quote {
+  color: var(--cafe-claro);
+  font-size: 1.5rem;
+  opacity: 0.7;
+}
+
+/* Formulario */
+.form-control {
+  border: 1px solid var(--beige);
+  padding: 0.75rem 1rem;
+}
+
+.form-control:focus {
+  border-color: var(--cafe-claro);
+  box-shadow: 0 0 0 0.25rem rgba(141, 110, 99, 0.25);
+}
+
+/* Footer */
+.footer {
+  background-color: var(--cafe-oscuro);
+  color: var(--beige);
+  padding: 4rem 0 2rem;
+}
+
+.footer-links a {
+  color: var(--beige);
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--dorado);
+  text-decoration: none;
+}
+
+/* Elementos rústicos */
+.rustic-divider {
+  height: 2px;
+  background-color: var(--beige);
+  margin: 2rem 0;
+  position: relative;
+}
+
+.rustic-divider::before {
+  content: '✻';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--beige-claro);
+  padding: 0 1rem;
+  color: var(--cafe-claro);
+}
+
+/* Efectos de texto */
+.text-cafe {
+  color: var(--cafe-medio);
+}
+
+.text-dorado {
+  color: var(--dorado);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 70vh;
+    text-align: center;
+  }
+  
+  .hero-content {
+    padding: 2rem;
+  }
+}
+
+/* Estilos para la barra de navegación activa */
+.navbar .nav-link {
+    position: relative;
+    padding: 0.5rem 1rem;
+    margin: 0 0.2rem;
+    transition: all 0.3s ease;
+    color: var(--beige);
+}
+
+.navbar .nav-link:hover {
+    color: white;
+}
+
+.navbar .nav-link.active {
+    color: white;
+    font-weight: 600;
+}
+
+.navbar .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 15%;
+    width: 70%;
+    height: 2px;
+    background-color: var(--dorado);
+    transition: all 0.3s ease;
+}
+
+/* Efecto hover para enlaces no activos */
+.navbar .nav-link:not(.active):hover::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 25%;
+    width: 50%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Estilo para el menú móvil */
+.navbar-dark .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
