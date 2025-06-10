@@ -1,0 +1,2 @@
+# gaia
+Inversiones en cultivos
